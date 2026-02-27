@@ -10,6 +10,8 @@ pnpm install
 
 ## Run demos
 
+<!-- TODO: add stackblitz link -->
+
 ### Demo 1.1
 
 - Code: [src/demo-rsc.tsx](./src/demo-rsc.tsx)
@@ -41,16 +43,3 @@ pnpm -s vite-run src/demo-server-function-arguments.tsx form
 ```sh
 pnpm -s vite-run src/demo-use-cache.tsx
 ```
-
-## Generate SVG snapshots
-
-```sh
-pnpm -s update-svg
-```
-
-Generated files:
-
-- [assets/demo-rsc-output.svg](./assets/demo-rsc-output.svg)
-- [assets/demo-server-function-arguments-simple-output.svg](./assets/demo-server-function-arguments-simple-output.svg)
-- [assets/demo-server-function-arguments-form-output.svg](./assets/demo-server-function-arguments-form-output.svg)
-- [assets/demo-use-cache-output.svg](./assets/demo-use-cache-output.svg)

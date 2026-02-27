@@ -17,19 +17,17 @@ export function Root() {
   );
 }
 
-// TODO: design and framing
-// - mention @vitejs/plugin-rsc + vite-plugin-react-use-cache
-// - example to paralell demo-use-cache.ts
-// - deploy to cloudflare workers with kv
-// - allow each cache fro each user?
-
 function App() {
   return (
-    <div id="root">
-      <h1>"use cache" demo</h1>
-      <div className="card">
+    <main id="root" className="page">
+      <h1>"use cache" minimal demo</h1>
+      <p className="lead">
+        This page demonstrates that a cached server component can include a
+        dynamic child.
+      </p>
+      <div className="panel">
         <Demo />
       </div>
-    </div>
+    </main>
   );
 }

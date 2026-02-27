@@ -10,12 +10,12 @@ export async function main() {
     );
   }
 
-  const rootNode = <ServerComponent />;
+  const reactNode = <ServerComponent />;
   logSection("Step 1/3", "Server Component Node");
-  logLhs("reactNode", rootNode);
+  logLhs("reactNode", reactNode);
   console.log();
 
-  const rscStream = renderToReadableStream(rootNode);
+  const rscStream = renderToReadableStream(reactNode);
   const [rscStream1, rscStream2] = rscStream.tee();
   logSection("Step 2/3", "RSC Stream Payload (renderToReadableStream)");
   logLhs("rscStream", await stringToString(rscStream1));

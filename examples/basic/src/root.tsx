@@ -1,8 +1,8 @@
-import './index.css' // css import is automatically injected in exported server components
-import viteLogo from '/vite.svg'
-import { getServerCounter, updateServerCounter } from './action.tsx'
-import reactLogo from './assets/react.svg'
-import { ClientCounter } from './client.tsx'
+import "./index.css"; // css import is automatically injected in exported server components
+import viteLogo from "/vite.svg";
+import { getServerCounter, updateServerCounter } from "./action.tsx";
+import reactLogo from "./assets/react.svg";
+import { ClientCounter } from "./client.tsx";
 
 export function Root(props: { url: URL }) {
   return (
@@ -17,7 +17,7 @@ export function Root(props: { url: URL }) {
         <App {...props} />
       </body>
     </html>
-  )
+  );
 }
 
 function App(props: { url: URL }) {
@@ -27,10 +27,7 @@ function App(props: { url: URL }) {
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
-        <a
-          href="https://react.dev/reference/rsc/server-components"
-          target="_blank"
-        >
+        <a href="https://react.dev/reference/rsc/server-components" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
@@ -52,20 +49,20 @@ function App(props: { url: URL }) {
           Edit <code>src/root.tsx</code> to test server HMR.
         </li>
         <li>
-          Visit{' '}
+          Visit{" "}
           <a href="./_.rsc" target="_blank">
             <code>_.rsc</code>
-          </a>{' '}
+          </a>{" "}
           to view RSC stream payload.
         </li>
         <li>
-          Visit{' '}
+          Visit{" "}
           <a href="?__nojs" target="_blank">
             <code>?__nojs</code>
-          </a>{' '}
+          </a>{" "}
           to test server action without js enabled.
         </li>
       </ul>
     </div>
-  )
+  );
 }

@@ -10,10 +10,7 @@ The poster explains the concepts visually, and this repo lets you run the same s
 Code: [src/demo-rsc.tsx](./src/demo-rsc.tsx)
 
 ```tsx
-import {
-  renderToReadableStream,
-  createFromReadableStream
-} from "@vitejs/plugin-rsc/rsc";
+import { renderToReadableStream, createFromReadableStream } from "@vitejs/plugin-rsc/rsc";
 
 // Step 1/3: Server Component Node
 async function ServerComponent() {

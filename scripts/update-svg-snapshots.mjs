@@ -52,7 +52,7 @@ for (const snapshot of snapshots) {
       FORCE_COLOR: "1",
     },
   });
-  const withCommand = `$ ${snapshot.displayCommand}\n${output}`;
+  const withCommand = `$ ${snapshot.displayCommand}\n${output}`.trimEnd();
   const svg = ansiToSvg(withCommand, svgOptions);
   const outPath = resolve(assetsDir, snapshot.outFile);
   writeFileSync(outPath, svg);

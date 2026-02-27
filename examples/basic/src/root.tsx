@@ -38,11 +38,11 @@ function App() {
         <a href="https://github.com/jacob-ebey/vite-plugin-react-use-cache">
           vite-plugin-react-use-cache
         </a>
-        ,{" "}
+        , and{" "}
         <a href="https://developers.cloudflare.com/kv/">
           Cloudflare Workers KV
         </a>
-        , and <a href="https://unstorage.unjs.io/">unstorage</a>.
+        .
       </p>
       <div className="panel">
         <Demo />

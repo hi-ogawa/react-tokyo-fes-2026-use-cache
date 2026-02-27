@@ -14,4 +14,10 @@
       "id": "0008de9be78f4b2992588e2b427c22e8",
     },
   ],
+  "r2_buckets": [
+    {
+      "bucket_name": "react-tokyo-fes-2026-use-cache-r2",
+      "binding": "R2",
+    },
+  ],
 }

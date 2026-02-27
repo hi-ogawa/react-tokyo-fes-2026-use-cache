@@ -40,6 +40,17 @@ h1 {
   color: #4f5d73;
 }
 
+.stack {
+  margin: -0.6rem 0 1rem;
+  color: #4f5d73;
+  font-size: 0.92rem;
+}
+
+.stack code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.88em;
+}
+
 .panel {
   background: #ffffff;
   border: 1px solid #d8dee9;

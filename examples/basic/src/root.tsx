@@ -19,7 +19,6 @@ export function Root() {
 
 // TODO:
 // - link to source
-// - mention `@vitejs/plugin-rsc`, `vite-plugin-react-use-cache`, and cloudflare workers KV with `unstorage`
 // - cache per visitor?
 
 function App() {
@@ -29,6 +28,11 @@ function App() {
       <p className="lead">
         This page demonstrates that a cached server component can include a
         dynamic child.
+      </p>
+      <p className="stack">
+        Built with <code>@vitejs/plugin-rsc</code>,{" "}
+        <code>vite-plugin-react-use-cache</code>, and Cloudflare Workers KV via{" "}
+        <code>unstorage</code>.
       </p>
       <div className="panel">
         <Demo />

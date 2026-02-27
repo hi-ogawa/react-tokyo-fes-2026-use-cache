@@ -32,7 +32,8 @@ function DynamicChild() {
 
       <p className="hint">
         Reload this page a few times: static should stay cached, while dynamic
-        keeps updating. Click Reset cache to force static to recompute.
+        keeps updating. Default cache TTL is 5 minutes. Click Reset cache to
+        force static to recompute.
       </p>
 
       <form

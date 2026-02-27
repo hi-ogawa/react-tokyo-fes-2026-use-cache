@@ -38,3 +38,8 @@ pnpm build
 pnpm preview
 pnpm release
 ```
+
+```js
+pnpm wrangler kv namespace create react-tokyo-fes-2026-use-cache-kv
+pnpm wrangler r2 bucket create react-tokyo-fes-2026-use-cache-r2
+```

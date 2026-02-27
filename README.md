@@ -15,7 +15,7 @@ Try it live: https://react-tokyo-fes-2026-use-cache.hiro18181.workers.dev/
 
 These demos break down how `"use cache"` works under the hood, matching the numbered diagrams on the poster. Each demo runs as a standalone script — no browser needed.
 
-[Run on StackBlitz](https://stackblitz.com/edit/github-ivqdpjye?file=src%2Fdemo-use-cache.tsx)
+[Run the demo on StackBlitz](https://stackblitz.com/edit/github-ivqdpjye?file=src%2Fdemo-use-cache.tsx)
 
 ### Demo 1.1
 

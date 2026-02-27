@@ -5,6 +5,14 @@ The poster explains the concepts visually, and this repo lets you run the same s
 
 [Run it on browser (Stackblitz)](https://stackblitz.com/edit/github-ivqdpjye?file=src%2Fdemo-use-cache.tsx)
 
+## Live demo
+
+`"use cache"` demo application built with [`@vitejs/plugin-rsc`](https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-rsc), [`vite-plugin-react-use-cache`](https://github.com/jacob-ebey/vite-plugin-react-use-cache), [Cloudflare Workers KV](https://developers.cloudflare.com/kv/), and [unstorage](https://unstorage.unjs.io/).
+
+Code: [`examples/basic`](./examples/basic)
+
+Deployed example: https://react-tokyo-fes-2026-use-cache.hiro18181.workers.dev/
+
 ## Demo 1.1
 
 Code: [src/demo-rsc.tsx](./src/demo-rsc.tsx)

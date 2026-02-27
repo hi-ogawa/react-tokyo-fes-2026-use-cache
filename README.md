@@ -4,11 +4,11 @@ Runnable demo code from my poster session in https://react-tokyo.vercel.app/fes2
 
 ## Run demos
 
-- [Run on browser (Stackblitz)](https://stackblitz.com/edit/github-ivqdpjye?file=src%2Fdemo-use-cache.tsx)
+[Run it on browser (Stackblitz)](https://stackblitz.com/edit/github-ivqdpjye?file=src%2Fdemo-use-cache.tsx)
 
 ### Demo 1.1
 
-- Code: [src/demo-rsc.tsx](./src/demo-rsc.tsx)
+Code: [src/demo-rsc.tsx](./src/demo-rsc.tsx)
 
 ```sh
 node ./vite-run.js src/demo-rsc.tsx
@@ -18,17 +18,17 @@ node ./vite-run.js src/demo-rsc.tsx
 
 ### Demo 1.2 (simple)
 
-- Code: [src/demo-server-function-arguments.tsx](./src/demo-server-function-arguments.tsx)
+Code: [src/demo-server-function-arguments.tsx](./src/demo-server-function-arguments.tsx#L18)
 
 ```sh
 node ./vite-run.js src/demo-server-function-arguments.tsx simple
 ```
 
-![Demo 1.2 simple SVG snapshot](./assets/demo-server-function-arguments-simple-output.svg)
+![Demo 1.2 simple SVG snapshot](./assets/demo-server-function-arguments-simple-output.svg#L36)
 
 ### Demo 1.2 (form)
 
-- Code: [src/demo-server-function-arguments.tsx](./src/demo-server-function-arguments.tsx)
+Code: [src/demo-server-function-arguments.tsx](./src/demo-server-function-arguments.tsx)
 
 ```sh
 node ./vite-run.js src/demo-server-function-arguments.tsx form
@@ -38,7 +38,7 @@ node ./vite-run.js src/demo-server-function-arguments.tsx form
 
 ### Demo 2.1
 
-- Code: [src/demo-use-cache.tsx](./src/demo-use-cache.tsx)
+Code: [src/demo-use-cache.tsx](./src/demo-use-cache.tsx)
 
 ```sh
 node ./vite-run.js src/demo-use-cache.tsx

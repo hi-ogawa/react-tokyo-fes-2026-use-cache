@@ -1,0 +1,17 @@
+{
+  "name": "react-tokyo-fes-2026-use-cache",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "vite-run": "node ./vite-run.js",
+    "update-svg": "node scripts/update-svg-snapshots.mjs"
+  },
+  "dependencies": {
+    "react": "^19.2.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-rsc": "latest",
+    "ansi-to-svg": "^1.4.3",
+    "vite": "^7.3.1"
+  }
+}

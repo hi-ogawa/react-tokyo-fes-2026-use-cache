@@ -2,15 +2,9 @@
 
 Runnable demo code from my poster session in https://react-tokyo.vercel.app/fes2026
 
-## Setup
-
-```sh
-pnpm install
-```
-
 ## Run demos
 
-<!-- TODO: add stackblitz link -->
+- [Run on browser (Stackblitz)](https://stackblitz.com/edit/github-ivqdpjye?file=src%2Fdemo-use-cache.tsx)
 
 ### Demo 1.1
 

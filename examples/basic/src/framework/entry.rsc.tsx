@@ -9,6 +9,7 @@ import {
 import type { ReactFormState } from "react-dom/client";
 import { Root } from "../root.tsx";
 import { parseRenderRequest } from "./request.tsx";
+import { withUseCache } from "./use-cache.ts";
 
 // The schema of payload which is serialized into RSC stream on rsc environment
 // and deserialized on ssr/client environments.
@@ -25,7 +26,11 @@ export type RscPayload = {
 
 // the plugin by default assumes `rsc` entry having default export of request handler.
 // however, how server entries are executed can be customized by registering own server handler.
-export default { fetch: handler };
+export default {
+  fetch: (request: Request) => {
+    return withUseCache(() => handler(request));
+  },
+};
 
 async function handler(request: Request): Promise<Response> {
   // differentiate RSC, SSR, action, etc.
@@ -99,9 +104,9 @@ async function handler(request: Request): Promise<Response> {
   // The plugin provides `loadModule` helper to allow loading SSR environment entry module
   // in RSC environment. however this can be customized by implementing own runtime communication
   // e.g. `@cloudflare/vite-plugin`'s service binding.
-  const ssrEntryModule = await import.meta.viteRsc.loadModule<typeof import("./entry.ssr.tsx")>(
-    "ssr",
-    "index",
+  const ssrEntryModule = await import.meta.viteRsc.import<typeof import("./entry.ssr.tsx")>(
+    "./entry.ssr.tsx",
+    { environment: "ssr" },
   );
   const ssrResult = await ssrEntryModule.renderHTML(rscStream, {
     formState,

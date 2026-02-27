@@ -26,7 +26,7 @@ export function Root() {
 function App() {
   return (
     <main id="root" className="page">
-      <h1>"use cache" minimal demo</h1>
+      <h1>"use cache" demo</h1>
       <p className="lead">
         This page demonstrates that a cached server component can include a
         dynamic child.

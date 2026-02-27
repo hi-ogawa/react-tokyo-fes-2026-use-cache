@@ -8,6 +8,7 @@
     "lint": "oxfmt"
   },
   "devDependencies": {
+    "@types/node": "^25.3.2",
     "@vitejs/plugin-rsc": "latest",
     "ansi-to-svg": "^1.4.3",
     "oxfmt": "^0.35.0",

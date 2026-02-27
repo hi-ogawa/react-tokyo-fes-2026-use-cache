@@ -4,14 +4,14 @@
   "type": "module",
   "scripts": {
     "vite-run": "node ./vite-run.js",
-    "update-svg": "node scripts/update-svg-snapshots.mjs"
-  },
-  "dependencies": {
-    "react": "^19.2.3"
+    "update-svg": "node scripts/update-svg-snapshots.mjs",
+    "lint": "oxfmt"
   },
   "devDependencies": {
     "@vitejs/plugin-rsc": "latest",
     "ansi-to-svg": "^1.4.3",
+    "oxfmt": "^0.35.0",
+    "react": "^19.2.4",
     "vite": "^7.3.1"
   }
 }

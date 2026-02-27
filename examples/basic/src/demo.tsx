@@ -8,14 +8,14 @@ function CachedParent({ children }) {
   "use cache";
   return (
     <div>
-      <span>static: {new Date().toISOString()}</span>
+      <div>static: {new Date().toISOString()}</div>
       {children}
     </div>
   );
 }
 
 function DynamicChild() {
-  return <span>dynamic: {new Date().toISOString()}</span>;
+  return <div>dynamic: {new Date().toISOString()}</div>;
 }
 `;
 

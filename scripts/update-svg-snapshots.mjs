@@ -10,23 +10,23 @@ const assetsDir = resolve(rootDir, "assets");
 
 const snapshots = [
   {
-    displayCommand: "pnpm -s vite-run src/demo-rsc.tsx",
-    command: "pnpm -s vite-run src/demo-rsc.tsx",
+    displayCommand: "node ./vite-run.js src/demo-rsc.tsx",
+    command: "node ./vite-run.js src/demo-rsc.tsx",
     outFile: "demo-rsc-output.svg",
   },
   {
-    displayCommand: "pnpm -s vite-run src/demo-server-function-arguments.tsx simple",
-    command: "pnpm -s vite-run src/demo-server-function-arguments.tsx simple",
+    displayCommand: "node ./vite-run.js src/demo-server-function-arguments.tsx simple",
+    command: "node ./vite-run.js src/demo-server-function-arguments.tsx simple",
     outFile: "demo-server-function-arguments-simple-output.svg",
   },
   {
-    displayCommand: "pnpm -s vite-run src/demo-server-function-arguments.tsx form",
-    command: "pnpm -s vite-run src/demo-server-function-arguments.tsx form",
+    displayCommand: "node ./vite-run.js src/demo-server-function-arguments.tsx form",
+    command: "node ./vite-run.js src/demo-server-function-arguments.tsx form",
     outFile: "demo-server-function-arguments-form-output.svg",
   },
   {
-    displayCommand: "pnpm -s vite-run src/demo-use-cache.tsx",
-    command: "pnpm -s vite-run src/demo-use-cache.tsx",
+    displayCommand: "node ./vite-run.js src/demo-use-cache.tsx",
+    command: "node ./vite-run.js src/demo-use-cache.tsx",
     outFile: "demo-use-cache-output.svg",
   },
 ];

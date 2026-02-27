@@ -51,9 +51,3 @@ node ./vite-run.js src/demo-use-cache.tsx
 ```
 
 ![Demo 2.1 SVG snapshot](./assets/demo-use-cache-output.svg)
-
-## Regenerate SVG snapshots
-
-```sh
-pnpm -s update-svg
-```

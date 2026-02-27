@@ -11,8 +11,29 @@ The poster explains the concepts visually, and this repo lets you run the same s
 
 Code: [src/demo-rsc.tsx](./src/demo-rsc.tsx)
 
+```tsx
+import {
+  renderToReadableStream,
+  createFromReadableStream
+} from "@vitejs/plugin-rsc/rsc";
+
+async function ServerComponent() {
+  return (
+    <div>
+      <span>{Math.random()}</span>
+    </div>
+  );
+}
+
+const reactNode = <ServerComponent />;
+
+const rscStream = renderToReadableStream(reactNode);
+
+const reactNodeClient = await createFromReadableStream(rscStream);
+```
+
 ```sh
-node ./vite-run.js src/demo-rsc.tsx
+$ node ./vite-run.js src/demo-rsc.tsx
 ```
 
 ![Demo 1.1 SVG snapshot](./assets/demo-rsc-output.svg)
@@ -22,7 +43,7 @@ node ./vite-run.js src/demo-rsc.tsx
 Code: [src/demo-server-function-arguments.tsx](./src/demo-server-function-arguments.tsx#L18)
 
 ```sh
-node ./vite-run.js src/demo-server-function-arguments.tsx simple
+$ node ./vite-run.js src/demo-server-function-arguments.tsx simple
 ```
 
 ![Demo 1.2 simple SVG snapshot](./assets/demo-server-function-arguments-simple-output.svg#L36)
@@ -32,7 +53,7 @@ node ./vite-run.js src/demo-server-function-arguments.tsx simple
 Code: [src/demo-server-function-arguments.tsx](./src/demo-server-function-arguments.tsx)
 
 ```sh
-node ./vite-run.js src/demo-server-function-arguments.tsx form
+$ node ./vite-run.js src/demo-server-function-arguments.tsx form
 ```
 
 ![Demo 1.2 form SVG snapshot](./assets/demo-server-function-arguments-form-output.svg)
@@ -42,7 +63,7 @@ node ./vite-run.js src/demo-server-function-arguments.tsx form
 Code: [src/demo-use-cache.tsx](./src/demo-use-cache.tsx)
 
 ```sh
-node ./vite-run.js src/demo-use-cache.tsx
+$ node ./vite-run.js src/demo-use-cache.tsx
 ```
 
 ![Demo 2.1 SVG snapshot](./assets/demo-use-cache-output.svg)

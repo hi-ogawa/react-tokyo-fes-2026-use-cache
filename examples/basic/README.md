@@ -21,6 +21,7 @@ This app intentionally stays minimal and demonstrates the same shape as Demo 2.1
 - `dynamic: {new Date().toISOString()}`
 
 The page also includes a small code block so the UI itself explains what is running.
+It also includes a `Reset cache` button that calls a server action and revalidates a global cache tag (`demo-global`).
 
 ## What to verify
 
@@ -29,6 +30,7 @@ The page also includes a small code block so the UI itself explains what is runn
 3. Compare values:
    - `static` should stay cached for the same render input.
    - `dynamic` should keep updating because it is outside the cached component body.
+4. Click `Reset cache` and confirm `static` recomputes on the next render.
 
 ```js
 pnpm dev

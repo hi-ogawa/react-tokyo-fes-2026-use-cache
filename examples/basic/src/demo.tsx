@@ -1,3 +1,5 @@
+import { cacheTag, revalidateTag } from "vite-plugin-react-use-cache/runtime";
+
 export function Demo() {
   const snippet = `\
 <CachedParent>
@@ -29,9 +31,20 @@ function DynamicChild() {
       </div>
 
       <p className="hint">
-        Reload this page a few times. The static value should stay cached while
-        the dynamic value updates.
+        Reload this page a few times: static should stay cached, while dynamic
+        keeps updating. Click Reset cache to force static to recompute.
       </p>
+
+      <form
+        action={async () => {
+          "use server";
+          await revalidateTag("demo-global");
+        }}
+        className="controls"
+      >
+        <button type="submit">Reset cache</button>
+        <span className="control-note">Global tag: demo-global</span>
+      </form>
 
       <h2>Code</h2>
       <pre className="code-block">
@@ -43,6 +56,7 @@ function DynamicChild() {
 
 function CachedParent({ children }: { children: React.ReactNode }) {
   "use cache";
+  cacheTag("demo-global");
   return (
     <div className="cached-parent-box">
       <strong>&lt;CachedParent&gt; (with "use cache")</strong>

@@ -1,4 +1,8 @@
-import { createFromReadableStream, renderToReadableStream } from "@vitejs/plugin-rsc/rsc";
+import {
+  createFromReadableStream,
+  renderToReadableStream,
+} from "@vitejs/plugin-rsc/rsc";
+
 import { logLhs, logSection, stringToString } from "./utils";
 
 export async function main() {

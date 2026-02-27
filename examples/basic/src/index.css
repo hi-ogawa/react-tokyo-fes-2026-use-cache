@@ -1,0 +1,146 @@
+:root {
+  font-family:
+    ui-sans-serif,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #1a2230;
+  background: #f7f8fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.9rem;
+}
+
+.lead {
+  margin: 0.5rem 0 1.25rem;
+  color: #4f5d73;
+}
+
+.stack {
+  margin: -0.6rem 0 1rem;
+  color: #4f5d73;
+  font-size: 0.92rem;
+}
+
+.stack a {
+  color: #2f5b9a;
+  text-decoration: none;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.88em;
+}
+
+.stack a:hover {
+  text-decoration: underline;
+}
+
+.panel {
+  background: #ffffff;
+  border: 1px solid #d8dee9;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.demo h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.05rem;
+}
+
+.output {
+  display: block;
+  padding: 0.75rem;
+  border: 1px solid #d8dee9;
+  border-radius: 8px;
+  background: #f9fbff;
+}
+
+.cached-parent-box {
+  border: 1px solid #9db4d8;
+  border-radius: 8px;
+  background: #eef4ff;
+  padding: 0.75rem;
+}
+
+.dynamic-child-box {
+  margin-top: 0.7rem;
+  border: 1px solid #c8d2e4;
+  border-radius: 6px;
+  background: #ffffff;
+  padding: 0.65rem;
+}
+
+.value {
+  margin-top: 0.35rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.9rem;
+}
+
+.hint {
+  margin: 0.85rem 0 1rem;
+  color: #4f5d73;
+}
+
+.kv-warning {
+  color: #9a3d00;
+  font-weight: 700;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0 0 1rem;
+}
+
+button {
+  border: 1px solid #9db4d8;
+  background: #ffffff;
+  color: #1a2230;
+  border-radius: 6px;
+  padding: 0.25rem 0.5rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #eef4ff;
+}
+
+.control-note {
+  color: #4f5d73;
+  font-size: 0.88rem;
+}
+
+.code-block {
+  margin: 0;
+  padding: 0.9rem;
+  border-radius: 8px;
+  border: 1px solid #d8dee9;
+  background: #f4f6fb;
+  overflow-x: auto;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}

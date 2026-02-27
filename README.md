@@ -1,6 +1,7 @@
 # React Tokyo Fes 2026 "use cache" poster demo
 
-Runnable demo code from my poster session in https://react-tokyo.vercel.app/fes2026
+This repository is the companion demo resource for my [React Tokyo Fes 2026](https://react-tokyo.vercel.app/fes2026) poster session on `use cache`.
+The poster explains the concepts visually, and this repo lets you run the same step-by-step demos locally and compare the output with the diagrams.
 
 ## Run demos
 

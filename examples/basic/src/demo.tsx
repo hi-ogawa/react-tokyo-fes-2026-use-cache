@@ -23,7 +23,7 @@ function DynamicChild() {
 
   return (
     <section className="demo">
-      <h2>Live output</h2>
+      <h2>Render Result</h2>
       <div className="output">
         <CachedParent>
           <DynamicChild />

@@ -46,9 +46,15 @@ h1 {
   font-size: 0.92rem;
 }
 
-.stack code {
+.stack a {
+  color: #2f5b9a;
+  text-decoration: none;
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.88em;
+}
+
+.stack a:hover {
+  text-decoration: underline;
 }
 
 .panel {
@@ -59,7 +65,7 @@ h1 {
 }
 
 .demo h2 {
-  margin: 0.75rem 0;
+  margin: 0 0 0.5rem 0;
   font-size: 1.05rem;
 }
 

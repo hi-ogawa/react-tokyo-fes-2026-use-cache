@@ -30,9 +30,19 @@ function App() {
         dynamic child.
       </p>
       <p className="stack">
-        Built with <code>@vitejs/plugin-rsc</code>,{" "}
-        <code>vite-plugin-react-use-cache</code>, and Cloudflare Workers KV via{" "}
-        <code>unstorage</code>.
+        Built with{" "}
+        <a href="https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-rsc">
+          @vitejs/plugin-rsc
+        </a>
+        ,{" "}
+        <a href="https://github.com/jacob-ebey/vite-plugin-react-use-cache">
+          vite-plugin-react-use-cache
+        </a>
+        ,{" "}
+        <a href="https://developers.cloudflare.com/kv/">
+          Cloudflare Workers KV
+        </a>
+        , and <a href="https://unstorage.unjs.io/">unstorage</a>.
       </p>
       <div className="panel">
         <Demo />

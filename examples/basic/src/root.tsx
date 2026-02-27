@@ -17,6 +17,12 @@ export function Root() {
   );
 }
 
+// TODO:
+// - link to source
+// - mention `@vitejs/plugin-rsc`, `vite-plugin-react-use-cache`, and cloudflare workers KV with `unstorage`
+// - ability to reset cache
+// - cache per visitor?
+
 function App() {
   return (
     <main id="root" className="page">

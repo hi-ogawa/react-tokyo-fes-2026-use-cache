@@ -1,8 +1,10 @@
 export function Demo() {
   return (
-    <CachedParent>
-      <DynamicChild />
-    </CachedParent>
+    <div>
+      <CachedParent>
+        <DynamicChild />
+      </CachedParent>
+    </div>
   );
 }
 

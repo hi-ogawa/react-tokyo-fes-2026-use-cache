@@ -83,7 +83,7 @@ async function handler(request: Request): Promise<Response> {
   // so that new render reflects updated state from server function call
   // to achieve single round trip to mutate and fetch from server.
   const rscPayload: RscPayload = {
-    root: <Root url={renderRequest.url} />,
+    root: <Root />,
     formState,
     returnValue,
   };

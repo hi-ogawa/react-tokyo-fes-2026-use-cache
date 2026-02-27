@@ -1,10 +1,7 @@
-import "./index.css"; // css import is automatically injected in exported server components
-import viteLogo from "/vite.svg";
-import { getServerCounter, updateServerCounter } from "./action.tsx";
-import reactLogo from "./assets/react.svg";
-import { ClientCounter } from "./client.tsx";
+import "./index.css";
+import { Demo } from "./demo.tsx";
 
-export function Root(props: { url: URL }) {
+export function Root() {
   return (
     <html lang="en">
       <head>
@@ -14,55 +11,25 @@ export function Root(props: { url: URL }) {
         <title>Vite + RSC</title>
       </head>
       <body>
-        <App {...props} />
+        <App />
       </body>
     </html>
   );
 }
 
-function App(props: { url: URL }) {
+// TODO: design and framing
+// - mention @vitejs/plugin-rsc + vite-plugin-react-use-cache
+// - example to paralell demo-use-cache.ts
+// - deploy to cloudflare workers with kv
+// - allow each cache fro each user?
+
+function App() {
   return (
     <div id="root">
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev/reference/rsc/server-components" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + RSC</h1>
+      <h1>"use cache" demo</h1>
       <div className="card">
-        <ClientCounter />
+        <Demo />
       </div>
-      <div className="card">
-        <form action={updateServerCounter.bind(null, 1)}>
-          <button>Server Counter: {getServerCounter()}</button>
-        </form>
-      </div>
-      <div className="card">Request URL: {props.url?.href}</div>
-      <ul className="read-the-docs">
-        <li>
-          Edit <code>src/client.tsx</code> to test client HMR.
-        </li>
-        <li>
-          Edit <code>src/root.tsx</code> to test server HMR.
-        </li>
-        <li>
-          Visit{" "}
-          <a href="./_.rsc" target="_blank">
-            <code>_.rsc</code>
-          </a>{" "}
-          to view RSC stream payload.
-        </li>
-        <li>
-          Visit{" "}
-          <a href="?__nojs" target="_blank">
-            <code>?__nojs</code>
-          </a>{" "}
-          to test server action without js enabled.
-        </li>
-      </ul>
     </div>
   );
 }

@@ -1,10 +1,12 @@
+import { env } from "cloudflare:workers";
 import { createStorage } from "unstorage";
-import fsDriver from "unstorage/drivers/fs";
+import cloudflareKVBindingDriver from "unstorage/drivers/cloudflare-kv-binding";
 import { provideCache } from "vite-plugin-react-use-cache/runtime";
 import { createUnstorageCache } from "vite-plugin-react-use-cache/unstorage";
 
+// https://unstorage.unjs.io/drivers/cloudflare#cloudflare-kv-binding
 const storage = createStorage({
-  driver: fsDriver({ base: "./node_modules/.use-cache" }),
+  driver: cloudflareKVBindingDriver({ binding: env.KV }),
 });
 
 export function withUseCache<T>(handler: () => Promise<T>): Promise<T> {

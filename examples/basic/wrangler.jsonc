@@ -1,8 +1,14 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "vite-rsc-starter",
+  "name": "react-tokyo-fes-2026-use-cache",
   "main": "./src/framework/entry.rsc.tsx",
   "workers_dev": true,
   "compatibility_date": "2025-10-01",
   "compatibility_flags": ["nodejs_compat"],
+  "kv_namespaces": [
+    {
+      "binding": "KV",
+      "id": "0008de9be78f4b2992588e2b427c22e8",
+    },
+  ],
 }

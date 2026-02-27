@@ -46,5 +46,10 @@ export default defineConfig({
         entries: ["./src/framework/entry.ssr.tsx"],
       },
     },
+    rsc: {
+      optimizeDeps: {
+        entries: ["./src/framework/entry.rsc.tsx"],
+      },
+    },
   },
 });

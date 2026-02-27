@@ -6,5 +6,5 @@ Integrating [`vite-plugin-react-use-cache`](https://github.com/jacob-ebey/vite-p
 pnpm dev
 pnpm build
 pnpm preview
-pnpm deploy
+pnpm release
 ```

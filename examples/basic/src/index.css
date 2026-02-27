@@ -97,6 +97,11 @@ h1 {
   color: #4f5d73;
 }
 
+.kv-warning {
+  color: #9a3d00;
+  font-weight: 700;
+}
+
 .controls {
   display: flex;
   align-items: center;

@@ -1,4 +1,4 @@
-import { env } from "cloudflare:workers";
+import { env, waitUntil } from "cloudflare:workers";
 import { createStorage } from "unstorage";
 import cloudflareKVBindingDriver from "unstorage/drivers/cloudflare-kv-binding";
 import { provideCache } from "vite-plugin-react-use-cache/runtime";
@@ -10,5 +10,10 @@ const storage = createStorage({
 });
 
 export function withUseCache<T>(handler: () => Promise<T>): Promise<T> {
-  return provideCache(createUnstorageCache(storage), handler);
+  return provideCache(
+    createUnstorageCache(storage),
+    handler,
+    undefined,
+    waitUntil,
+  );
 }

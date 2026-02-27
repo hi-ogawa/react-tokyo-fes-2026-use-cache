@@ -1,19 +1,23 @@
 # React Tokyo Fes 2026 "use cache" poster demo
 
-This repository is the companion demo resource for my [React Tokyo Fes 2026](https://react-tokyo.vercel.app/fes2026) poster session on `use cache`.
-The poster explains the concepts visually, and this repo lets you run the same step-by-step demos locally and compare the output with the diagrams.
-
-[Run it on browser (Stackblitz)](https://stackblitz.com/edit/github-ivqdpjye?file=src%2Fdemo-use-cache.tsx)
+This repository accompanies my [React Tokyo Fes 2026](https://react-tokyo.vercel.app/fes2026) poster session on `use cache`.
+The poster explains the concepts visually, and this repo lets you run the same demos locally and see the output for yourself.
 
 ## Live demo
 
-`"use cache"` demo application built with [`@vitejs/plugin-rsc`](https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-rsc), [`vite-plugin-react-use-cache`](https://github.com/jacob-ebey/vite-plugin-react-use-cache), [Cloudflare Workers KV](https://developers.cloudflare.com/kv/), and [unstorage](https://unstorage.unjs.io/).
+A working application that demonstrates `"use cache"` in action, built with [`@vitejs/plugin-rsc`](https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-rsc), [`vite-plugin-react-use-cache`](https://github.com/jacob-ebey/vite-plugin-react-use-cache), [Cloudflare Workers KV](https://developers.cloudflare.com/kv/), and [unstorage](https://unstorage.unjs.io/).
 
 Code: [`examples/basic`](./examples/basic)
 
 Deployed example: https://react-tokyo-fes-2026-use-cache.hiro18181.workers.dev/
 
-## Demo 1.1
+## Poster demos
+
+These demos break down how `"use cache"` works under the hood, matching the numbered diagrams on the poster. Each demo runs as a standalone script — no browser needed.
+
+[Run on StackBlitz](https://stackblitz.com/edit/github-ivqdpjye?file=src%2Fdemo-use-cache.tsx)
+
+### Demo 1.1
 
 Code: [src/demo-rsc.tsx](./src/demo-rsc.tsx)
 
@@ -47,7 +51,7 @@ $ node ./vite-run.js src/demo-rsc.tsx
 
 ![Demo 1.1 SVG snapshot](./assets/demo-rsc-output.svg)
 
-## Demo 1.2 (simple)
+### Demo 1.2 (simple)
 
 Code: [src/demo-server-function-arguments.tsx](./src/demo-server-function-arguments.tsx#L18)
 
@@ -70,7 +74,7 @@ $ node ./vite-run.js src/demo-server-function-arguments.tsx simple
 
 ![Demo 1.2 simple SVG snapshot](./assets/demo-server-function-arguments-simple-output.svg#L36)
 
-## Demo 1.2 (form)
+### Demo 1.2 (form)
 
 Code: [src/demo-server-function-arguments.tsx](./src/demo-server-function-arguments.tsx)
 
@@ -95,7 +99,7 @@ $ node ./vite-run.js src/demo-server-function-arguments.tsx form
 
 ![Demo 1.2 form SVG snapshot](./assets/demo-server-function-arguments-form-output.svg)
 
-## Demo 2.1
+### Demo 2.1
 
 Code: [src/demo-use-cache.tsx](./src/demo-use-cache.tsx)
 

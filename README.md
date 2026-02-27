@@ -17,29 +17,43 @@ pnpm install
 - Code: [src/demo-rsc.tsx](./src/demo-rsc.tsx)
 
 ```sh
-pnpm -s vite-run src/demo-rsc.tsx
+node ./vite-run.js src/demo-rsc.tsx
 ```
+
+![Demo 1.1 SVG snapshot](./assets/demo-rsc-output.svg)
 
 ### Demo 1.2 (simple)
 
 - Code: [src/demo-server-function-arguments.tsx](./src/demo-server-function-arguments.tsx)
 
 ```sh
-pnpm -s vite-run src/demo-server-function-arguments.tsx simple
+node ./vite-run.js src/demo-server-function-arguments.tsx simple
 ```
+
+![Demo 1.2 simple SVG snapshot](./assets/demo-server-function-arguments-simple-output.svg)
 
 ### Demo 1.2 (form)
 
 - Code: [src/demo-server-function-arguments.tsx](./src/demo-server-function-arguments.tsx)
 
 ```sh
-pnpm -s vite-run src/demo-server-function-arguments.tsx form
+node ./vite-run.js src/demo-server-function-arguments.tsx form
 ```
+
+![Demo 1.2 form SVG snapshot](./assets/demo-server-function-arguments-form-output.svg)
 
 ### Demo 2.1
 
 - Code: [src/demo-use-cache.tsx](./src/demo-use-cache.tsx)
 
 ```sh
-pnpm -s vite-run src/demo-use-cache.tsx
+node ./vite-run.js src/demo-use-cache.tsx
+```
+
+![Demo 2.1 SVG snapshot](./assets/demo-use-cache-output.svg)
+
+## Regenerate SVG snapshots
+
+```sh
+pnpm -s update-svg
 ```

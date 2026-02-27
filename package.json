@@ -13,5 +13,8 @@
     "oxfmt": "^0.35.0",
     "react": "^19.2.4",
     "vite": "^7.3.1"
+  },
+  "stackblitz": {
+    "startCommand": "node ./vite-run.js src/demo-use-cache.tsx"
   }
 }

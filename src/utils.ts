@@ -12,10 +12,17 @@ export function logNote(note: string) {
   console.log(styleText("yellow", `Note: ${note}`));
 }
 
-export function logLhs(name: string, value: unknown, options?: { styled?: boolean }) {
+export function logLhs(
+  name: string,
+  value: unknown,
+  options?: { styled?: boolean },
+) {
   const label = options?.styled ? styleText("bold", `${name} =`) : `${name} =`;
   console.log(label);
-  const text = typeof value === "string" ? value : inspect(value, { depth: null, colors: true });
+  const text =
+    typeof value === "string"
+      ? value
+      : inspect(value, { depth: null, colors: true });
   console.log(
     text
       .split("\n")

@@ -1,6 +1,7 @@
 import assert from "node:assert";
-import { createServer, isRunnableDevEnvironment } from "vite";
+
 import rsc from "@vitejs/plugin-rsc";
+import { createServer, isRunnableDevEnvironment } from "vite";
 
 async function main() {
   const [input, ...args] = process.argv.slice(2);

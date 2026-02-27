@@ -2,6 +2,7 @@ import { execSync } from "node:child_process";
 import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+
 import ansiToSvg from "ansi-to-svg";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -15,12 +16,14 @@ const snapshots = [
     outFile: "demo-rsc-output.svg",
   },
   {
-    displayCommand: "node ./vite-run.js src/demo-server-function-arguments.tsx simple",
+    displayCommand:
+      "node ./vite-run.js src/demo-server-function-arguments.tsx simple",
     command: "node ./vite-run.js src/demo-server-function-arguments.tsx simple",
     outFile: "demo-server-function-arguments-simple-output.svg",
   },
   {
-    displayCommand: "node ./vite-run.js src/demo-server-function-arguments.tsx form",
+    displayCommand:
+      "node ./vite-run.js src/demo-server-function-arguments.tsx form",
     command: "node ./vite-run.js src/demo-server-function-arguments.tsx form",
     outFile: "demo-server-function-arguments-form-output.svg",
   },

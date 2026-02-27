@@ -10,7 +10,10 @@ The poster explains the concepts visually, and this repo lets you run the same s
 Code: [src/demo-rsc.tsx](./src/demo-rsc.tsx)
 
 ```tsx
-import { renderToReadableStream, createFromReadableStream } from "@vitejs/plugin-rsc/rsc";
+import {
+  renderToReadableStream,
+  createFromReadableStream,
+} from "@vitejs/plugin-rsc/rsc";
 
 // Step 1/3: Server Component Node
 async function ServerComponent() {
@@ -111,25 +114,34 @@ function DynamicChild() {
   return <span>dynamic: {new Date().toISOString()}</span>;
 }
 
-async function __cache_wrapper__(originalFn: (...args: any[]) => React.ReactNode) {
+async function __cache_wrapper__(
+  originalFn: (...args: any[]) => React.ReactNode,
+) {
   const cache = new Map<string, string>();
 
   return async (...args: any[]) => {
     // Step 1/5: Encode Args as Cache Key (encodeReply)
     const clientTempRefs = createClientTemporaryReferenceSet();
-    const encodedArgs = await encodeReply(args, { temporaryReferences: clientTempRefs });
-    if (typeof encodedArgs !== "string") throw new Error("Expected string cache key");
+    const encodedArgs = await encodeReply(args, {
+      temporaryReferences: clientTempRefs,
+    });
+    if (typeof encodedArgs !== "string")
+      throw new Error("Expected string cache key");
 
     if (!cache.has(encodedArgs)) {
       // Step 2/5: Decode Arguments (decodeReply)
       const serverTempRefs = createTemporaryReferenceSet();
-      const decodedArgs = await decodeReply(encodedArgs, { temporaryReferences: serverTempRefs });
+      const decodedArgs = await decodeReply(encodedArgs, {
+        temporaryReferences: serverTempRefs,
+      });
 
       // Step 3/5: Execute Original Function
       const result = originalFn(...(decodedArgs as any[]));
 
       // Step 4/5: Serialize Result and Cache (renderToReadableStream)
-      const stream = renderToReadableStream(result, { temporaryReferences: serverTempRefs });
+      const stream = renderToReadableStream(result, {
+        temporaryReferences: serverTempRefs,
+      });
       const payload = await new Response(stream).text();
       cache.set(encodedArgs, payload);
     }

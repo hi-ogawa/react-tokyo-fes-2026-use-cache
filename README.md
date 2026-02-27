@@ -1,8 +1,6 @@
-# React Tokyo Fes 2026 - use cache demos
+# React Tokyo Fes 2026 "use cache" poster demo
 
-Associated demo resources for my poster session:
-
-- https://react-tokyo.vercel.app/fes2026
+Runnable demo code from my poster session in https://react-tokyo.vercel.app/fes2026
 
 ## Setup
 

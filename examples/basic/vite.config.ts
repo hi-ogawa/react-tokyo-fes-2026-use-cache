@@ -19,21 +19,6 @@ export default defineConfig({
       },
     }),
     useCachePlugin(),
-    {
-      // TODO: fix upstream
-      name: "use-cache-plugin-patch",
-      transform: {
-        order: "pre",
-        handler(code) {
-          if (code.includes("global.___VITE_USE_CACHE_STORAGE___ ")) {
-            return code.replace(
-              "global.___VITE_USE_CACHE_STORAGE___",
-              "globalThis.___VITE_USE_CACHE_STORAGE___",
-            );
-          }
-        },
-      },
-    },
   ],
   environments: {
     ssr: {
